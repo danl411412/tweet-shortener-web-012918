@@ -14,13 +14,13 @@ def dictionary
   }
 end
 
-def word_substituter(tweet) 
+def word_substituter(tweet)
   shorter_tweet = []
   tweet.split.collect do |word|
     if dictionary.keys.include?(word)
       shorter_tweet << dictionary[word]
     else
-      shorter_tweet << word  
+      shorter_tweet << word
     end
   end
   shorter_tweet.join(" ")
